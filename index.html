@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plis Food Teste — Multi Delivery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Sites de delivery disponíveis">
+        <div class="brand">
+          <span class="brand__logo" aria-hidden="true">PF</span>
+          <div>
+            <strong>Plis Food</strong>
+            <small>ambiente de teste</small>
+          </div>
+        </div>
+
+        <button class="sidebar__site is-active" data-site="ifood" type="button">
+          <span class="site-icon">🍔</span>
+          <span>
+            <strong>iFood Demo</strong>
+            <small>restaurantes e pratos</small>
+          </span>
+        </button>
+        <button class="sidebar__site" data-site="pizza" type="button">
+          <span class="site-icon">🍕</span>
+          <span>
+            <strong>Pizza Hub</strong>
+            <small>combos e bebidas</small>
+          </span>
+        </button>
+        <button class="sidebar__site" data-site="market" type="button">
+          <span class="site-icon">🛒</span>
+          <span>
+            <strong>Mercado Rápido</strong>
+            <small>itens de conveniência</small>
+          </span>
+        </button>
+        <button class="sidebar__site" data-site="sushi" type="button">
+          <span class="site-icon">🍣</span>
+          <span>
+            <strong>Sushi Express</strong>
+            <small>entrega premium</small>
+          </span>
+        </button>
+
+        <div class="disclaimer">
+          <strong>Protótipo</strong>
+          <p>Este app apenas simula sites de delivery dentro de uma interface única. Nenhum pedido real é enviado.</p>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Aplicativo agregador experimental</p>
+            <h1>Vários deliveries em um só lugar</h1>
+          </div>
+          <button class="cart-button" id="cartButton" type="button" aria-live="polite">
+            🧾 Carrinho <span id="cartCount">0</span>
+          </button>
+        </header>
+
+        <section class="browser-card" aria-label="Emulador de site interno">
+          <div class="browser-toolbar">
+            <div class="window-controls" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="address-bar" id="addressBar">https://teste.plisfood.local/ifood-demo</div>
+            <button class="reload-button" id="reloadButton" type="button">Recarregar</button>
+          </div>
+
+          <div class="site-frame" id="siteFrame" tabindex="0"></div>
+        </section>
+
+        <section class="cart-panel" id="cartPanel" aria-label="Resumo do pedido de teste">
+          <div class="cart-panel__header">
+            <h2>Pedido de teste</h2>
+            <button id="clearCart" type="button">Limpar</button>
+          </div>
+          <ul id="cartItems"></ul>
+          <div class="cart-total">
+            <span>Total simulado</span>
+            <strong id="cartTotal">R$ 0,00</strong>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
